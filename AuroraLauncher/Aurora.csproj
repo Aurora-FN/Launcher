@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="5968898.png" />
+    <None Remove="button_gradient.jpg" />
+    <None Remove="download.png" />
+    <None Remove="Logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ModernWpfUI" Version="0.9.6" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="websocket-sharp.clone" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="5968898.png" />
+    <Resource Include="button_gradient.jpg" />
+    <Resource Include="download.png" />
+    <Resource Include="Logo.png" />
+  </ItemGroup>
+
+</Project>

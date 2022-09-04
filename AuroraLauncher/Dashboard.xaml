@@ -1,0 +1,33 @@
+﻿<Window x:Class="AuroraLauncher.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ui="http://schemas.modernwpf.com/2019"
+        xmlns:local="clr-namespace:AuroraLauncher"
+        mc:Ignorable="d"
+        Title="Dashboard" Height="307" Width="572" ui:WindowHelper.UseModernWindowStyle="True" Loaded="Dashboard_Loaded">
+    <Grid>
+        <Label Content="Logged in as" FontWeight="Bold" FontSize="14" Margin="463,0,0,256" HorizontalAlignment="Left" Width="99" Height="21" VerticalAlignment="Bottom"/>
+        <Label x:Name="Username" Content="Username" HorizontalAlignment="Center" Margin="480,0,0,237" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="14"/>
+        <Image HorizontalAlignment="Right" Height="46" Margin="0,12,509,0" VerticalAlignment="Top" Width="45" Source="/Logo.png" Stretch="UniformToFill"/>
+        <Button x:Name="LaunchFN" Content="Launch" Margin="203,213,0,0" VerticalAlignment="Top" Click="LaunchFNClicked" Width="124" Height="32" Foreground="White">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFB700FF" Offset="1"/>
+                    <GradientStop Color="#FFFF00F5" Offset="0.009"/>
+                    <GradientStop Color="#FFA000FF" Offset="0.476"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="Settings" Margin="0,20,464,0" VerticalAlignment="Top" Click="SettingsClicked" HorizontalAlignment="Right" Width="31" Height="30">
+            <Image Height="15" Width="14" Source="/download.png" Stretch="Fill"/>
+        </Button>
+        <Image HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="166" Source="/Logo.png" Margin="182,73,0,0"/>
+        <TextBlock TextWrapping="Wrap" Text="A Fortnite private server with actual accounts, customization, parties, multiplayer, and more!" Height="58" Width="252" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14"/>
+        <Button x:Name="Discord" Margin="113,20,0,0" VerticalAlignment="Top" Height="30" Width="34" Click="DiscordClicked">
+            <Image Height="15" Width="16" Source="/5968898.png" Stretch="Fill"/>
+        </Button>
+        <Button x:Name="Chat_Btn" Content="Chat" Margin="152,19,0,0" VerticalAlignment="Top" Click="ChatClicked"/>
+    </Grid>
+</Window>

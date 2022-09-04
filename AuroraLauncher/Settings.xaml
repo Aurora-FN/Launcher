@@ -1,0 +1,43 @@
+﻿<Window x:Class="AuroraLauncher.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ui="http://schemas.modernwpf.com/2019"
+        xmlns:local="clr-namespace:AuroraLauncher"
+        mc:Ignorable="d"
+        Title="Settings" Height="395" Width="680" ui:WindowHelper.UseModernWindowStyle="True" Loaded="SettingsLoaded">
+    <Grid>
+        <TabControl>
+            <TabItem Header="General">
+                <Grid x:Name="GeneralTab">
+                    <CheckBox x:Name="SinglePlayerIngame" Content="Singleplayer Ingame" Margin="0,17,492,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="167" Checked="SinglePlayerChecked" Unchecked="SinglePlayerUnchecked"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Fortnite Settings">
+                <Grid>
+                    <TextBox x:Name="FortnitePathText" HorizontalAlignment="Left" Margin="15,14,0,0" TextWrapping="Wrap" Text="Fortnite Path" VerticalAlignment="Top" Width="305"/>
+                    <Button x:Name="FNPathSave" Content="Save" Margin="325,14,0,0" VerticalAlignment="Top" Click="FNPathSaved"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Advanced">
+                <Grid>
+                    <CheckBox x:Name="CustomFLTokenCheckbox" Content="Enable Custom FLToken" Margin="23,20,0,0" VerticalAlignment="Top" Width="207" Checked="CustomFLTokenChecked" Unchecked="CustomFLTokenUnchecked"/>
+                    <TextBox x:Name="CustomFLTokenText" HorizontalAlignment="Left" Margin="23,57,0,0" TextWrapping="Wrap" Text="Custom FLToken" VerticalAlignment="Top" Width="259" IsEnabled="False"/>
+                    <Button x:Name="SaveFLToken_Btn" Content="Save" Margin="287,57,0,0" VerticalAlignment="Top" IsEnabled="False" Click="FLTokenSave"/>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Experimental">
+                <Grid>
+                    <CheckBox x:Name="OldVerSupportBox" Content="Enable Old Version Support" Margin="21,20,0,0" VerticalAlignment="Top" Checked="OldSupportPatchChecked" Unchecked="OldSupportUnchecked"/>
+                    <Label Content="NOTE: Experimental Settings never save after close of Fortnite and/or launcher" HorizontalAlignment="Left" Margin="21,0,0,10" VerticalAlignment="Bottom"/>
+                    <CheckBox x:Name="LauncherConsoleCheckbox" Content="Enable Launcher Console" Margin="21,57,0,0" VerticalAlignment="Top" Width="198" Checked="LaunchConsoleChecked" Unloaded="LaunchConsoleUnchecked"/>
+                    <CheckBox x:Name="NewVersionSupportBox" Content="Enable New Version Support" Margin="21,94,0,0" VerticalAlignment="Top" Checked="NewVerSupportChecked" Unchecked="NewVerSupportUnchecked"/>
+
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>
